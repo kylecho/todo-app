@@ -14,15 +14,11 @@ var InputView = Backbone.View.extend({
     this.$el.html('<input type="text">');
     return this;
   },
-  
-  onEnter: function() {
+
+  onEnter: function(e) {
     if (e.keyCode == 13) {
-      var value = this.input.val();
-      if (!value) {
-        this.clear();
-      } else {
-        this.model.save({text: value});
-      } 
+      var value = this.$el.val();
+      this.collection.addToCollection(value);
     }
   }
 

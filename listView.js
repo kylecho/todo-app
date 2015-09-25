@@ -1,8 +1,6 @@
 var ListView = Backbone.View.extend({
 
-  el: 'ol',
-
-  tagName: "ol",
+  el: '<div>',
 
   className: "list",
 
@@ -12,10 +10,9 @@ var ListView = Backbone.View.extend({
   },
 
   render: function() {
-    // this.$el.children.detach();
-    return this.$el.append(
-      this.collection.map(function(entry) {
-        return new entryView({model: Entry}).render();
+    return this.$el.html('<ol></ol>').append(
+      this.collection.models.map(function(entry) {
+        return entry.attributes.text;
       })
     );
   }

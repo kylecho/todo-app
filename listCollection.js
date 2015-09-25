@@ -1,3 +1,7 @@
 var List = Backbone.Collection.extend({
-  model: Entry
+  model: Entry,
+
+  addToCollection: function(value) {
+    this.add({text: value});
+  }
 });

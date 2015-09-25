@@ -17,9 +17,9 @@
     <script>
       $(function() {
         // set up model objects
-        var entry = new Entry();
+        var entry = new Entry({text: "I will pass!!!"});
         // build a view for the top level of the whole app
-        var appView = new AppView();
+        var appView = new AppView({collection: new List()});
         // put the view onto the screen
         $('body').append(appView.render());
       });

@@ -1,8 +1,8 @@
 var AppView = Backbone.View.extend({
 
   initialize: function() {
-    this.inputView = new InputView();
-    this.listView = new ListView({collection: List});
+    this.inputView = new InputView({collection: this.collection});
+    this.listView = new ListView({collection: this.collection});
   },
 
   render: function(){
