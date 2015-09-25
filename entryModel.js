@@ -1,5 +1,5 @@
 var Entry = Backbone.Model.extend({
   defaults: {
-    text: ""
+    text: "I'm a text"
   }
 });

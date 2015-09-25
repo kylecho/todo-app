@@ -7,6 +7,22 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <script src="entryModel.js"></script>
+    <script src="listCollection.js"></script>
     <script src="app.js"></script>
+    <script src="entryView.js"></script>
+    <script src="listView.js"></script>
+    <script src="inputView.js"></script>
+    <script src="appView.js"></script>
+    <script>
+      $(function() {
+        // set up model objects
+        var entry = new Entry();
+        // build a view for the top level of the whole app
+        var appView = new AppView();
+        // put the view onto the screen
+        $('body').append(appView.render());
+      });
+    </script>
   </body>
 </html>
