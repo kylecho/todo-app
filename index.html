@@ -4,6 +4,8 @@
     <title>Todo</title>
   </head>
   <body>
+    <h2>Enter to add, click to remove</h2>
+    <div id="app"></div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -16,12 +18,10 @@
     <script src="appView.js"></script>
     <script>
       $(function() {
-        // set up model objects
-        var entry = new Entry({text: "I will pass!!!"});
         // build a view for the top level of the whole app
         var appView = new AppView({collection: new List()});
         // put the view onto the screen
-        $('body').append(appView.render());
+        $("#app").append(appView.render());
       });
     </script>
   </body>

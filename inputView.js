@@ -19,6 +19,7 @@ var InputView = Backbone.View.extend({
     if (e.keyCode == 13) {
       var value = this.$el.val();
       this.collection.addToCollection(value);
+      this.$el.val("");
     }
   }
 

@@ -7,11 +7,12 @@ var EntryView = Backbone.View.extend({
   className: "entry",
 
   events: {
-    "click .entry": "destroy"
+    "click": "destroy"
   },
 
   initialize: function() {
     this.listenTo(this.model, "change", this.render);
+    // this.listenTo(this.model, 'destroy', this.remove);
   },
 
   render: function() {
@@ -19,7 +20,7 @@ var EntryView = Backbone.View.extend({
     return this;
   },
 
-  distroy: function() {
+  destroy: function() {
     this.model.destroy();
   }
 
